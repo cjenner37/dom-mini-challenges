@@ -7,3 +7,16 @@ as a button. In a Javascript file, write code that does the following things whe
 		your username and password!"
 	if anything is wrong, send an alert message saying "Incorrect username or password"
 */
+
+
+document.querySelector('#submit').addEventListener('click', function(e) {
+	e.preventDefault();
+	let username = document.querySelector('#username').value;
+	let password = document.querySelector('#password').value;
+
+	if ( username.length < 14 && password == 12345678){
+		document.getElementsByTagName('h1')[0].innerText = "Congrats on knowing your username and password!";
+	} else {
+		alert("Incorrect username or password");
+	};
+});
